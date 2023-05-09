@@ -28,40 +28,44 @@ function renderLicenseLink(license) {
       return "";
   }
 }
-
-
 // Create a function that returns the license section of README
 function renderLicenseSection(license) {
   if (!license) {
     return "";
   }
   return `## License
-
-This project is licensed under the ${license.upperCase} license.`;
+  This project is licensed under the ${license} license.`;
 }
-
-// TODO: Create a function to generate markdown for README
+// Create a function to generate markdown for README
 function generateMarkdown(data) {
   const license = data.license;
   return `# ${data.title}
-  
-  ${renderLicenseBadge(license)}
-  ## Description
+${renderLicenseBadge(license)}
+## Screen Shot
+  ${data.screenshot}
+  ![ALT](*Add screenshot file path here*) -> Delete if n/a.
+## Title
+  ${data.title}
+## Description
   ${data.description}
-  ## Table of Contents:
-  
-  ## Installation
-  ${data.installation}
-  ## Usage
+## Table of Contents
+1. [Usage](#usage)
+2. [Installation](#installation)
+3. [Test](#test)
+4. [Contribution Guidelines](#contribution guidelines)
+5. [License](#license)
+## Usage
   ${data.usage}
-  ${renderLicenseSection(license)}
-  ## Contributing
-  ${data.contribution}
-  ## Tests
+## Installation
+  ${data.installation}
+## Test
   ${data.test}
-  ## Questions?
-
-  If you have any questions, please reach out to ${data.username} at ${data.email}.
+## Contribution guidelines
+  ${data.contributionguidelines}
+## License
+  ${data.license}
+## Questions?
+Please reach out to ${data.githubusername} at ${data.email}.
   `;
   }
 

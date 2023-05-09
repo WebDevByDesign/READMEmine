@@ -5,9 +5,9 @@ import generateMarkdown from "./utils/generateMarkdown.js";
 
 // Create an array of options for license agreement
 const options = [ 
-  { name: "MIT", value: "mit" },
-  { name: "GPLv2", value: "gplv2" },
-  { name: "GPLv3", value: "gplv3" },
+  { name: "MIT", value: "MIT" },
+  { name: "GPLv2", value: "GPLv2" },
+  { name: "GPLv3", value: "GPLv3" },
   { name: "Apache", value: "apache" },
   { name: "BSD 3-Clause", value: "BSD 3-Clause" },
 ]
@@ -25,7 +25,7 @@ function writeToFile(fileName, data) {
   });
 }
 
-// TODO: Create a function to initialize app
+// Create a function to initialize questions
 function init() {
   inquirer
   .prompt([
@@ -37,13 +37,19 @@ function init() {
   {
     type: "input",
     name: "description",
-    message: "Write a short description about your project. (Examples include what was your motivation? Why did you build it? What problem does it solve? And what did you learn?)",
+    message: "Write a short description about your project. (Some examples: What was your motivation? Why did you build it? What problem does it solve? And what did you learn?)",
+  },
+  {
+    type: "input",
+    name: "screenshot",
+    message: "Screenshot (optional) setup feature, will auto populate in your new README.md file. Additional instructions will be provided. Press return to continue.",
   },
   {
     type: "input",
     name: "table of contents",
-    message: "List the table of contents (optional) you would like to use for this project.",
+    message: "Table of contents section added - press return to confirm.",
   },
+  
   {
     type: "input",
     name: "usage",
@@ -62,14 +68,24 @@ function init() {
   },
   {
     type: "input",
-    name: "contribution",
-    message: "",
+    name: "contributionguidelines",
+    message: "Add Contribution Guidelines:",
   },
   {
     type: "list",
     name: "license",
     message: "What type of license would you like to use?",
     choices: options,
+  },
+  {
+    type: "input",
+    name: "githubusername",
+    message: "What is your GitHub username?",
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "What is your e-mail address?",
   },
 ])
 .then((data) => {
