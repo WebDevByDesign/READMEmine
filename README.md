@@ -20,7 +20,7 @@ In your terminal, type "npm start", to initialize the READMEmine generator. Answ
 ## Installation
 First, ensure you are in the integrated terminal of the repo project you would like to create the README for. Second, clone the READMEmine repository onto your local computer. Next, on the command line, type "npm i", to install the required packages. Once these packages are installed, type "npm start" on the command line and follow the prompts.
 ## Demo
-[Link] Watch the demo here [https://youtu.be/xTMr0y3IIUM]: 
+Watch the demo here [https://youtu.be/xTMr0y3IIUM]: 
 ## Test
 In your terminal, type "npm start" and follow the prompts.
 ## Contribution
