@@ -52,7 +52,7 @@ ${renderLicenseBadge(license)}
 1. [Usage](#usage)
 2. [Installation](#installation)
 3. [Test](#test)
-4. [Contribution Guidelines](#contribution guidelines)
+4. [Contribution](#contribution)
 5. [License](#license)
 ## Usage
   ${data.usage}
@@ -60,8 +60,8 @@ ${renderLicenseBadge(license)}
   ${data.installation}
 ## Test
   ${data.test}
-## Contribution guidelines
-  ${data.contributionguidelines}
+## Contribution
+  ${data.contribution}
 ## License
   ${data.license}
 ## Questions?

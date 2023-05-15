@@ -24,6 +24,7 @@ function writeToFile(fileName, data) {
     }
   });
 }
+ 
 
 // Create a function to initialize questions
 function init() {
@@ -68,8 +69,8 @@ function init() {
   },
   {
     type: "input",
-    name: "contributionguidelines",
-    message: "Add Contribution Guidelines:",
+    name: "contribution",
+    message: "Add contributors",
   },
   {
     type: "list",
@@ -89,7 +90,7 @@ function init() {
   },
 ])
 .then((data) => {
-  writeToFile("README.md", data);
+  writeToFile("./utils/README.md", data);
 })
 .catch((err) => {
   console.log(err);
